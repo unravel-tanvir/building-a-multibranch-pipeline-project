@@ -1,13 +1,11 @@
 pipeline {
     agent any
     try {
-	    stages {
-	        stage('Build') {
-	            steps {
-	                sh 'echo "Hello world!"'
-	            }
-	        }
-	    }	
+        stage('Build') {
+            steps {
+                sh 'echo "Hello world!"'
+            }
+        }
     }
     catch(any) {
     	currentBuild.result = 'FAILURE'
